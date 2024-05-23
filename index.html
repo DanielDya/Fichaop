@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordem Paranormal Login</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        body {
+            border-radius: 50px;
+            background: #433a43;
+        }
+        .page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            margin-top: -90px;
+        }
+        .formLogin {
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            border-radius: 7px;
+            padding: 40px;
+            box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+            gap: 5px;
+        }
+        .areaLogin img {
+            width: 35%;
+            display: block;
+            margin: 0 auto;
+            height: 40%;
+        }
+        .formLogin h1 {
+            padding: 0;
+            margin: 0;
+            font-weight: 500;
+            font-size: 2.3em;
+        }
+        .formLogin p {
+            display: inline-block;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 25px;
+        }
+        .formLogin input {
+            padding: 15px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            margin-top: 5px;
+            border-radius: 4px;
+            transition: all linear 160ms;
+            outline: none;
+        }
+        .formLogin input:focus {
+            border: 1px solid #000000;
+        }
+        .formLogin label {
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .formLogin a {
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: 13px;
+            color: #555;
+            transition: all linear 160ms;
+        }   
+        .formLogin a:hover {
+            color: #ff0314;
+        }
+        .btn {
+            background-color: #7d1010;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            border: none !important;
+            transition: all linear 160ms;
+            cursor: pointer;
+            margin: 0 !important;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+            background-color: #ed0d1c;
+        }
+        .privacy-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #fff;
+            border: 2px solid #7d1010;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all linear 160ms;
+        }
+        .privacy-btn:hover {
+            background-color: #7d1010;
+            color: #fff;
+        }
+        .privacy-btn::after {
+            content: '!';
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .privacy-text {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background-color: #fff;
+            color: #7d1010;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            display: none;
+        }
+        .privacy-btn:hover + .privacy-text {
+            display: block;
+        }
+        footer {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background-color: #fff;
+        color: #7d1010;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        cursor: pointer;
+        border: 2px solid #7d1010;
+        transition: all linear 160ms;
+        z-index: 1;
+}
+
+footer:hover {
+    background-color: #7d1010;
+    color: #fff;
+}
+
+    </style>
+</head>
+<body>
+    <footer>
+        <p>Entre em contato</p>
+    </footer>    
+    <img src="Imagems/ordem.png" alt="" style="position: absolute; height: 80%; top: 20%;left: -29px;">
+     <a href="https://jamboeditora.com.br/produto/ordem-paranormal-rpg/" target="_blank">
+        <img src="Imagems/Capadoordem.png" alt="" style="position:absolute ;right: 3%; height: 60%; top: 29%;border-radius: 10px;box-shadow: 10px 10px 40px rgb(96, 87, 87);">
+    </a>
+    <div class="areaLogin">
+        <img src="Imagems/Titulo.png" alt="">
+    </div>
+    <div class="page">
+        <form method="POST" class="formLogin" id="loginForm">
+            <h1>Login</h1>
+            <p>Digite os seus dados de acesso no campo abaixo.</p>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="Digite seu e-mail"required />
+            <label for="password">Senha</label>
+            <input type="password" id="password" placeholder="Digite sua senha" required />
+            <input type="submit" value="Acessar" class="btn" />
+        </form>
+    </div>  
+    <div class="privacy-btn" onclick="location.href='Politica.html'"></div>
+    <div class="privacy-text">Política de Privacidade</div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio do formulário
+
+            // Obter valores dos campos de email e senha
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            // Verificar se ambos os campos estão preenchidos
+            if (email && password) {
+                window.location.href = 'Ficha Pessoal.html'; // Redireciona para a página desejada
+            } else {
+                alert('Por favor, preencha ambos os campos de e-mail e senha.');
+            }
+        });
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o envio do formulário
+
+    // Obter valores dos campos de email e senha
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+
+    // Verificar se ambos os campos estão preenchidos
+    if (email && password) {
+        window.location.href = 'Ficha Pessoal.html'; // Redireciona para a página desejada
+    } else {
+        alert('Por favor, preencha ambos os campos de e-mail e senha.');
+    }
+});
+
+document.querySelector('footer').addEventListener('click', function() {
+    window.location.href = 'Contato.html'; // Redireciona para a página de contato ao clicar no rodapé
+});
+
+    </script>
+</body>
+</html>
