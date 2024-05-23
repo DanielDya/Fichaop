@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Ficha Pessoal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .btn-save {
+            background-color: #990707af;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-back{
+            background-color: #990707af;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Estilos para checkboxes */
+        .checkbox-group {
+            margin-bottom: 10px;
+        }
+        .checkbox-group label {
+            margin-right: 10px;
+        }
+        .privacy-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #fff;
+            border: 2px solid #7d1010;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all linear 160ms;
+        }
+        .privacy-btn:hover {
+            background-color: #7d1010;
+            color: #fff;
+        }
+        .privacy-btn::after {
+            content: '!';
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .privacy-text {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background-color: #fff;
+            color: #7d1010;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            display: none;
+        }
+        .privacy-btn:hover + .privacy-text {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="privacy-btn" onclick="location.href='Politica.html'"></div>
+    <div class="privacy-text">Política de Privacidade</div>
+
+    <div class="container">
+        <h1>Ficha de RPG - Ordem Paranormal</h1>
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" placeholder="Digite seu nome">
+        </div>
+        <div class="form-group">
+            <label for="origem">Origem:</label>
+            <input type="text" id="origem" placeholder="Digite sua origem">
+        </div>
+        <div class="form-group">
+            <label for="classe">Classe:</label>
+            <input type="text" id="classe" placeholder="Digite sua classe">
+        </div>
+        <div class="form-group">
+            <label for="nex">Nível de Exposição (Nex):</label>
+            <input type="number" id="nex" placeholder="Digite seu Nex">
+        </div>
+        <div class="form-group">
+            <label for="defesa">Defesa:</label>
+            <input type="number" id="defesa" placeholder="Digite sua defesa">
+        </div>
+        <div class="form-group">
+            <label for="pontos-vida">Pontos de Vida:</label>
+            <input type="number" id="pontos-vida" placeholder="Digite a quantidade">
+        </div>
+        <div class="form-group">
+            <label for="pontos-esforco">Pontos de Esforço:</label>
+            <input type="number" id="pontos-esforco" placeholder="Digite a quantidade">
+        </div>
+        <div class="form-group">
+            <label for="pontos-sanidade">Pontos de Sanidade:</label>
+            <input type="number" id="pontos-sanidade" placeholder="Digite a quantidade">
+        </div>
+        <div class="form-group">
+            <label for="forca">Força:</label>
+            <input type="number" id="forca" placeholder="Força">
+        </div>
+        <div class="form-group">
+            <label for="agilidade">Agilidade:</label>
+            <input type="number" id="agilidade" placeholder="Agilidade">
+        </div>
+        <div class="form-group">
+            <label for="inteligencia">Inteligência:</label>
+            <input type="number" id="inteligencia" placeholder="Inteligência">
+        </div>
+        <div class="form-group">
+            <label for="vigor">Vigor:</label>
+            <input type="number" id="vigor" placeholder="Vigor">
+        </div>
+        <div class="form-group">
+            <label for="presenca">Presença:</label>
+            <input type="number" id="presenca" placeholder="Presença">
+        </div>
+        <div class="form-group checkbox-group">
+            <label>Perícias:</label><br>
+            <label><input type="checkbox" name="pericias" value="Acrobacia+">Acrobacia+</label>
+            <label><input type="checkbox" name="pericias" value="Ciências">Ciências</label>
+            <label><input type="checkbox" name="pericias" value="Crime">Crime</label>
+            <label><input type="checkbox" name="pericias" value="Diplomacia">Diplomacia</label>
+            <label><input type="checkbox" name="pericias" value="Enganação">Enganação</label>
+            <label><input type="checkbox" name="pericias" value="Fortitude">Fortitude</label>
+            <label><input type="checkbox" name="pericias" value="Furtividade">Furtividade</label>
+            <label><input type="checkbox" name="pericias" value="Iniciativa">Iniciativa</label>
+            <label><input type="checkbox" name="pericias" value="Intimidação">Intimidação</label>
+            <label><input type="checkbox" name="pericias" value="Investigação">Investigação</label>
+            <label><input type="checkbox" name="pericias" value="Luta">Luta</label>
+            <label><input type="checkbox" name="pericias" value="Medicina">Medicina</label>
+            <label><input type="checkbox" name="pericias" value="Ocultismo">Ocultismo</label>
+            <label><input type="checkbox" name="pericias" value="Percepção">Percepção</label>
+            <label><input type="checkbox" name="pericias" value="Pontaria">Pontaria</label>
+            <label><input type="checkbox" name="pericias" value="Reflexos">Reflexos</label>
+            <label><input type="checkbox" name="pericias" value="Religião">Religião</label>
+            <label><input type="checkbox" name="pericias" value="Tática">Tática</label>
+            <label><input type="checkbox" name="pericias" value="Tecnologia">Tecnologia</label>
+            <label><input type="checkbox" name="pericias" value="Vontade">Vontade</label>
+        </div>
+        <div class="form-group">
+            <label for="habilidades">Habilidades:</label>
+            <textarea id="habilidades" placeholder="Descreva suas habilidades"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="rituais">Rituais:</label>
+            <textarea id="rituais" placeholder="Descreva seus Rituais"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="inventario">Inventário:</label>
+            <textarea id="inventario" placeholder="Coloque aqui os seus itens"></textarea>
+        </div>
+        <button class="btn-save" onclick="salvarFicha()">Salvar Ficha</button>
+        <button class="btn-back" onclick="voltarParaIndex()">Voltar para o Inicio</button>
+    </div>
+    
+    <script>
+        function salvarFicha() {
+            const nome = document.getElementById('nome').value;
+            const origem = document.getElementById('origem').value;
+            const classe = document.getElementById('classe').value;
+            const nex = document.getElementById('nex').value;
+            const defesa = document.getElementById('defesa').value;
+            const pontosVida = document.getElementById('pontos-vida').value;
+            const pontosEsforco = document.getElementById('pontos-esforco').value;
+            const pontosSanidade = document.getElementById('pontos-sanidade').value;
+            const forca = document.getElementById('forca').value;
+            const agilidade = document.getElementById('agilidade').value;
+            const inteligencia = document.getElementById('inteligencia').value;
+            const vigor = document.getElementById('vigor').value;
+            const presenca = document.getElementById('presenca').value;
+            const habilidades = document.getElementById('habilidades').value;
+            const rituais = document.getElementById('rituais').value;
+            const inventario = document.getElementById('inventario').value;
+
+            // Verifica quais perícias foram selecionadas
+            const periciasSelecionadas = [];
+            const checkboxes = document.querySelectorAll('input[name="pericias"]:checked');
+            checkboxes.forEach(checkbox => {
+                periciasSelecionadas.push(checkbox.value);
+            });
+
+            // Salva todos os dados no localStorage
+            localStorage.setItem('nome', nome);
+            localStorage.setItem('origem', origem);
+            localStorage.setItem('classe', classe);
+            localStorage.setItem('nex', nex);
+            localStorage.setItem('defesa', defesa);
+            localStorage.setItem('pontosVida', pontosVida);
+            localStorage.setItem('pontosEsforco', pontosEsforco);
+            localStorage.setItem('pontosSanidade', pontosSanidade);
+            localStorage.setItem('forca', forca);
+            localStorage.setItem('agilidade', agilidade);
+            localStorage.setItem('inteligencia', inteligencia);
+            localStorage.setItem('vigor', vigor);
+            localStorage.setItem('presenca', presenca);
+            localStorage.setItem('habilidades', habilidades);
+            localStorage.setItem('rituais', rituais);
+            localStorage.setItem('inventario', inventario);
+            localStorage.setItem('periciasSelecionadas', JSON.stringify(periciasSelecionadas));
+
+            alert('Ficha salva com sucesso!');
+        }
+
+        // Carregar os dados da ficha ao carregar a página
+        window.onload = function() {
+            const nomeSalvo = localStorage.getItem('nome');
+            const origemSalva = localStorage.getItem('origem');
+            const classeSalva = localStorage.getItem('classe');
+            const nexSalvo = localStorage.getItem('nex');
+            const defesaSalva = localStorage.getItem('defesa');
+            const pontosVidaSalvos = localStorage.getItem('pontosVida');
+            const pontosEsforcoSalvos = localStorage.getItem('pontosEsforco');
+            const pontosSanidadeSalvos = localStorage.getItem('pontosSanidade');
+            const forcaSalva = localStorage.getItem('forca');
+            const agilidadeSalva = localStorage.getItem('agilidade');
+            const inteligenciaSalva = localStorage.getItem('inteligencia');
+            const vigorSalvo = localStorage.getItem('vigor');
+            const presencaSalva = localStorage.getItem('presenca');
+            const habilidadesSalvas = localStorage.getItem('habilidades');
+            const rituaisSalvos = localStorage.getItem('rituais');
+            const inventarioSalvo = localStorage.getItem('inventario');
+            const periciasSelecionadasSalvas = JSON.parse(localStorage.getItem('periciasSelecionadas'));
+
+            if (nomeSalvo) document.getElementById('nome').value = nomeSalvo;
+            if (origemSalva) document.getElementById('origem').value = origemSalva;
+            if (classeSalva) document.getElementById('classe').value = classeSalva;
+            if (nexSalvo) document.getElementById('nex').value = nexSalvo;
+            if (defesaSalva) document.getElementById('defesa').value = defesaSalva;
+            if (pontosVidaSalvos) document.getElementById('pontos-vida').value = pontosVidaSalvos;
+            if (pontosEsforcoSalvos) document.getElementById('pontos-esforco').value = pontosEsforcoSalvos;
+            if (pontosSanidadeSalvos) document.getElementById('pontos-sanidade').value = pontosSanidadeSalvos;
+            if (forcaSalva) document.getElementById('forca').value = forcaSalva;
+            if (agilidadeSalva) document.getElementById('agilidade').value = agilidadeSalva;
+            if (inteligenciaSalva) document.getElementById('inteligencia').value = inteligenciaSalva;
+            if (vigorSalvo) document.getElementById('vigor').value = vigorSalvo;
+            if (presencaSalva) document.getElementById('presenca').value = presencaSalva;
+            if (habilidadesSalvas) document.getElementById('habilidades').value = habilidadesSalvas;
+            if (rituaisSalvos) document.getElementById('rituais').value = rituaisSalvos;
+            if (inventarioSalvo) document.getElementById('inventario').value = inventarioSalvo;
+       
+            // Carregar as perícias selecionadas
+        if (periciasSelecionadasSalvas && periciasSelecionadasSalvas.length > 0) {
+            periciasSelecionadasSalvas.forEach(pericia => {
+                const checkbox = document.querySelector(`input[name="pericias"][value="${pericia}"]`);
+                if (checkbox) checkbox.checked = true;
+            });
+        }
+    }
+
+    function voltarParaIndex() {
+        window.location.href = 'index.html';
+    }
+</script>
+</body>
+</html>
+
+
